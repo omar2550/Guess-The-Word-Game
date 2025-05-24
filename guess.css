@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eee;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  margin: 0 0 20px;
+}
+.guess-game {
+  width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: flex-start;
+  .game-area {
+    .inputs {
+      margin-bottom: 10px;
+      div {
+        span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        &.disabled-input {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        input {
+          width: 50px;
+          height: 50px;
+          font-size: 40px;
+          text-align: center;
+          background-color: white;
+          border: none;
+          margin: 10px 3px 10px 10px;
+          border-bottom: 3px solid #333;
+          caret-color: #18ba18;
+          text-transform: uppercase;
+          &:focus {
+            outline-color: #ccc;
+          }
+        &.correct {
+          background-color: #18ba18;
+          border-color: #18ba18;
+          color: white;
+        }
+        &.not-in-place {
+          background-color: #f89e13;
+          border-color: #f89e13;
+          color: white;
+        }
+        &.wrong {
+          background-color: #27303f;
+          border-color: #27303f;
+          color: white;
+        }
+      }
+      }
+    }
+    .control {
+      .check {
+        padding: 10px 40px;
+        background-color: red;
+        border: none;
+        color: white;
+        font-size: 18px;
+        border-radius: 6px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .hint {
+        padding: 10px 15px;
+        background-color: green;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .disabled-button {
+        pointer-events: none;
+        background-color: #ccc;
+        color: #999;
+      }
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 24px;
+      color: #333;
+      font-weight: bold;
+      line-height: 1.5;
+      span {
+        font-size: 36px;
+        color: #f82213;
+        display: block;
+      }
+    }
+  }
+  .game-key {
+    .key {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      background-color: white;
+      margin-bottom: 10px;
+      .color {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 10px;
+        &.correct {
+          background-color: #18ba18;
+        }
+        &.not-in-place {
+          background-color: #f89e13;
+        }
+        &.wrong {
+          background-color: #27303f;
+        }
+      }
+    }
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  width: 100%;
+  color: white;
+}
